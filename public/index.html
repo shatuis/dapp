@@ -13,5 +13,16 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script>
+
+var Web3 = require("web3")
+const web3 = new Web3("https://cloudflare-eth.com")
+
+web3.eth.getBlockNumber(function (error, result) {
+  console.log(result)
+})
+
+    </script>
   </body>
 </html>
