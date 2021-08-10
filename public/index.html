@@ -11,18 +11,28 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <section>
+        <div>
+          <template>
+            <section>
+                <b-button @click="clickMe">Click Me</b-button>
+            </section>
+        </template>
+        <script>
+            export default {
+                methods: {
+                    clickMe() {
+                        this.$buefy.notification.open('Clicked!!')
+                    }
+                }
+            }
+        </script>
+        </div>
+      </section>
+
+    </div>
     <!-- built files will be auto injected -->
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    <script>
-
-var Web3 = require("web3")
-const web3 = new Web3("https://cloudflare-eth.com")
-
-web3.eth.getBlockNumber(function (error, result) {
-  console.log(result)
-})
-
-    </script>
   </body>
 </html>
