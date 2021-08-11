@@ -1,32 +1,7 @@
 <template>
   <div id="app">
-    <template>
-    <section>
-        <b-field>
-            <b-checkbox>Basic</b-checkbox>
-        </b-field>
-        <b-field>
-            <b-checkbox v-model="checkbox">
-                {{ checkbox }}
-            </b-checkbox>
-        </b-field>
-        <b-field>
-            <b-checkbox v-model="checkboxCustom"
-                true-value="Yes"
-                false-value="No">
-                {{ checkboxCustom }}
-            </b-checkbox>
-        </b-field>
-        <b-field>
-            <b-checkbox :indeterminate="true">
-                Indeterminate
-            </b-checkbox>
-        </b-field>
-        <b-field>
-            <b-checkbox disabled>Disabled</b-checkbox>
-        </b-field>
-    </section>
-</template>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -40,16 +15,7 @@ export default {
   }
 }
 </script>
-<script>
-    export default {
-        data() {
-            return {
-                checkbox: false,
-                checkboxCustom: 'Yes'
-            }
-        }
-    }
-</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
